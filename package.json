@@ -1,0 +1,34 @@
+{
+  "name": "template-extract-plugin",
+  "version": "0.0.1",
+  "description": "Extract a template which with css style tag from html-webpack-plugin result",
+  "main": "lib/plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BobbyLH/html-webpack-plugin-template.git"
+  },
+  "keywords": [
+    "webpack-plugin",
+    "webpack",
+    "plugin",
+    "template-extract-plugin"
+  ],
+  "author": "bobby.li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BobbyLH/html-webpack-plugin-template/issues"
+  },
+  "homepage": "https://github.com/BobbyLH/html-webpack-plugin-template#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.4"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "debug": "^4.1.1",
+    "html-minifier-terser": "^5.0.5"
+  }
+}
