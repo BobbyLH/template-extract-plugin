@@ -1,6 +1,6 @@
 {
   "name": "template-extract-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extract a template which with css style tag from html-webpack-plugin result",
   "main": "lib/plugin.js",
   "scripts": {
