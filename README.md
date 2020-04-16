@@ -58,7 +58,10 @@ new TemplateExtractPlugin({
 ```
 
 ### webpack.config.js 配置
+**Note**：插件强依赖 `html-webpack-plugin`，请将优先注册 `html-webpack-plugin` 保证顺序
+
 ```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TemplateExtractPlugin = require('template-extract-plugin');
 
 module.exports = {
@@ -77,6 +80,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'project',
+      // ……
+    }),
     // ……
     new TemplateExtractPlugin()
   ]
