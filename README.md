@@ -58,7 +58,7 @@ new TemplateExtractPlugin({
 ```
 
 ### webpack.config.js 配置
-**Note**：插件强依赖 `html-webpack-plugin`，请将优先注册 `html-webpack-plugin` 保证顺序
+**Note**：插件强依赖 `css-loader` 和 `html-webpack-plugin`，请优先注册 `html-webpack-plugin` 保证顺序，注意 `TemplateExtractPlugin.loader` 和 `css-loader` 的顺序。
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -72,7 +72,7 @@ module.exports = {
         test: /.(css|less)$/,
         use: [
           'style-loader',
-          TemplateExtractPlugin.loader,
+          TemplateExtractPlugin.loader, // 置于 css-loader 前
           'css-loader',
           'less-loader'
         ]
@@ -85,7 +85,7 @@ module.exports = {
       // ……
     }),
     // ……
-    new TemplateExtractPlugin()
+    new TemplateExtractPlugin() // 置于 HtmlWebpackPlugin 后
   ]
 };
 ```
@@ -103,12 +103,12 @@ import ShareContent from './ShareContent';
 
 const App = () => (
   <div>
-    各种内容
+    内容若干……
     <button
       onClick={() => {
         const content = ReactDOMServer.renderToString(ShareContent({
           title: '神奇的'
-        });
+        }));
 
         if (window._get_extract_template) {
           const shareDOM = window._get_extract_template(content);
@@ -117,7 +117,9 @@ const App = () => (
           // ajax.send(shareDOM);
         }
       }}
-    >分享按钮</button>
+    >
+      分享按钮
+    </button>
   </div>
 );
 ```
