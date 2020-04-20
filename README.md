@@ -52,8 +52,9 @@ const TemplateExtractPlugin = require('template-extract-plugin');
 
 // ……
 new TemplateExtractPlugin({
-  disable: false,
-  position: 'head-top' // 值可以是 head-top、head-bottom、body-top、body-bottom
+  disable: false, // 禁用插件，默认 false 
+  scriptTag: false, // 模板是否保留script标签，默认全部移除
+  position: 'head-top' // 值可以是 head-top、head-bottom、body-top、body-bottom，默认 body-bottom
 })
 ```
 
