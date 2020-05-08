@@ -126,3 +126,5 @@ const App = () => (
   </div>
 );
 ```
+
+**Note**：如果你的静态资源 `src` 地址是自动获取 protocol 的方式(`//cdn.xxx.com/image.jpg`)，可能你需要手动为其添加 protocol，以便它能在无头浏览器中正常执行。
