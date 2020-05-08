@@ -20,7 +20,8 @@ npm i --save-dev template-extract-plugin
 yarn add -D template-extract-plugin
 ```
 
-### index.html 中的模板注释
+### 项目配置
+#### 步骤 1：在 index.html/ejs 中添加模板注释
 
 - `<!--template-extract-css-->` `style` 标签插入的位置
 
@@ -45,7 +46,7 @@ yarn add -D template-extract-plugin
 </html>
 ```
 
-#### 通过配置Plugin的参数，指定js插入的位置
+##### 也可通过配置Plugin的参数，指定js插入的位置
 
 ```js
 const TemplateExtractPlugin = require('template-extract-plugin');
@@ -58,7 +59,7 @@ new TemplateExtractPlugin({
 })
 ```
 
-### webpack.config.js 配置
+#### 步骤 2： 配置你的 `webpack.config.js`
 **Note**：插件强依赖 `css-loader` 和 `html-webpack-plugin`，请优先注册 `html-webpack-plugin` 保证顺序，注意 `TemplateExtractPlugin.loader` 和 `css-loader` 的顺序。
 
 ```js
@@ -91,7 +92,8 @@ module.exports = {
 };
 ```
 
-### 在代码中获取(以React项目为例)
+### 应用
+#### 在代码中获取(以React项目为例)
 ```jsx
 // src/ShareContent.jsx
 export default props => <div>分享的{props.title}内容</div>;
