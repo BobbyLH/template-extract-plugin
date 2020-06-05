@@ -114,7 +114,13 @@ const App = () => (
         }));
 
         if (window._get_extract_template) {
-          const shareDOM = window._get_extract_template(content);
+          let shareDOM;
+          if (customStyle) {
+            // 自定义了 style 样式
+            shareDOM = window._get_extract_template(content, customStyle);
+          } else {
+            shareDOM = window._get_extract_template(content);
+          }
 
           // 接下去的逻辑可能是：发送你的分享DOM到某个node服务，而后用无头浏览器生成图片的相关信息返回给客户端
           // ajax.send(shareDOM);
