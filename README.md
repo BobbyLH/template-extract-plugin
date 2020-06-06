@@ -1,9 +1,9 @@
 # template-extract-plugin(webpack模板抽取插件)
 
-[![NPM downloads](http://img.shields.io/npm/dm/template-extract-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@omni-door/utils)
+[![NPM downloads](http://img.shields.io/npm/dm/template-extract-plugin.svg?style=flat-square)](https://www.npmjs.com/package/template-extract-plugin)
 [![npm version](https://badge.fury.io/js/template-extract-plugin.svg)](https://badge.fury.io/js/template-extract-plugin)
 [![install size](https://packagephobia.now.sh/badge?p=template-extract-plugin)](https://packagephobia.now.sh/result?p=template-extract-plugin)
-[![license](http://img.shields.io/npm/l/template-extract-plugin.svg)](https://github.com/omni-door/utils/blob/master/LICENSE)
+[![license](http://img.shields.io/npm/l/template-extract-plugin.svg)](https://github.com/BobbyLH/template-extract-plugin/blob/master/LICENSE)
 
 ## 初衷
 为了解决前端分享截图痛点，旨在项目 webpack 打包阶段，提取出分享DOM的信息。
