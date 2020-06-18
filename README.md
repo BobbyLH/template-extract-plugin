@@ -8,7 +8,7 @@
 ## 初衷
 为了解决前端分享截图痛点，旨在项目 webpack 打包阶段，提取出分享DOM的信息。
 
-从 `html-webpack-plugin` 中提取 `css` 和 `html`，并全局输出 `_get_extract_template` 方法，获取相应的模板。
+从 `html-webpack-plugin` 中提取 `css` 和 `html`，并全局输出 `_get_extract_template_` 方法，获取相应的模板。
 
 ## 使用
 
@@ -53,6 +53,7 @@ const TemplateExtractPlugin = require('template-extract-plugin');
 
 // ……
 new TemplateExtractPlugin({
+  injectInJs: true, // 将模板注入到 js文件，而非 html文件
   disable: false, // 禁用插件，默认 false 
   scriptTag: false, // 模板是否保留script标签，默认全部移除
   position: 'head-top' // 值可以是 head-top、head-bottom、body-top、body-bottom，默认 body-bottom
@@ -87,7 +88,9 @@ module.exports = {
       // ……
     }),
     // ……
-    new TemplateExtractPlugin() // 置于 HtmlWebpackPlugin 后
+    new TemplateExtractPlugin({
+      injectInJs: true
+    }) // 置于 HtmlWebpackPlugin 后
   ]
 };
 ```
@@ -113,13 +116,13 @@ const App = () => (
           title: '神奇的'
         }));
 
-        if (window._get_extract_template) {
+        if (window._get_extract_template_) {
           let shareDOM;
           if (customStyle) {
             // 自定义了 style 样式
-            shareDOM = window._get_extract_template(content, customStyle);
+            shareDOM = window._get_extract_template_(content, customStyle);
           } else {
-            shareDOM = window._get_extract_template(content);
+            shareDOM = window._get_extract_template_(content);
           }
 
           // 接下去的逻辑可能是：发送你的分享DOM到某个node服务，而后用无头浏览器生成图片的相关信息返回给客户端

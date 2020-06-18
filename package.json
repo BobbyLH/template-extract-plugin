@@ -3,6 +3,7 @@
   "version": "0.1.4",
   "description": "Extract a template which with css style tag from html-webpack-plugin result",
   "main": "lib/plugin.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "release:branch": "./build/branch.sh",
     "release:version": "./build/version.sh",
@@ -32,6 +33,7 @@
   "dependencies": {
     "clean-css": "^4.2.3",
     "debug": "^4.1.1",
-    "html-minifier-terser": "^5.0.5"
+    "html-minifier-terser": "^5.0.5",
+    "webpack-sources": "^1.4.3"
   }
 }
