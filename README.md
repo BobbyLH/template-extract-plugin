@@ -53,8 +53,7 @@ const TemplateExtractPlugin = require('template-extract-plugin');
 
 // ……
 new TemplateExtractPlugin({
-  injectInJs: true, // 将模板注入到 js文件，而非 html文件
-  injectInJs: 'async', // 也可指定注入 js 文件的 [name]，默认顺序为 chunk > vendor > main > index > jsFiles[0]
+  injectInJs: true, // 将模板注入到 js文件，而非 html文件，模板文件名为 snapshot.template.[hash:8].js
   disable: false, // 禁用插件，默认 false 
   scriptTag: false, // 模板是否保留script标签，默认全部移除
   position: 'head-top' // 值可以是 head-top、head-bottom、body-top、body-bottom，默认 body-bottom
