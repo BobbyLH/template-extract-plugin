@@ -32,6 +32,9 @@
     "webpack": "^4.43.0"
   },
   "dependencies": {
+    "@babel/core": "~7.10.0",
+    "@babel/preset-env": "~7.10.0",
+    "babel-preset-minify": "^0.5.1",
     "clean-css": "^4.2.3",
     "debug": "^4.1.1",
     "html-minifier-terser": "^5.0.5",
