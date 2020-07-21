@@ -1,6 +1,6 @@
 {
   "name": "template-extract-plugin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Extract a template which with css style tag from html-webpack-plugin result",
   "main": "lib/plugin.js",
   "typings": "lib/index.d.ts",
@@ -34,10 +34,10 @@
   "dependencies": {
     "@babel/core": "~7.10.0",
     "@babel/preset-env": "~7.10.0",
-    "babel-preset-minify": "^0.5.1",
-    "clean-css": "^4.2.3",
-    "debug": "^4.1.1",
-    "html-minifier-terser": "^5.0.5",
-    "webpack-sources": "^1.4.3"
+    "babel-preset-minify": "~0.5.1",
+    "clean-css": "4.2.3",
+    "debug": "4.1.1",
+    "html-minifier-terser": "5.0.5",
+    "webpack-sources": "~1.4.3"
   }
 }
