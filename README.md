@@ -31,7 +31,7 @@ yarn add -D template-extract-plugin
 
 - `<!--template-extract-del-start-->` 需要移除的代码块起始标志
 
-- `<!--template-extract-del-end-->` 需要移除的代码结束标志
+- `<!--template-extract-del-end-->` 需要移除的代码块结束标志
 
 ```html
 <!DOCTYPE html>
