@@ -29,6 +29,10 @@ yarn add -D template-extract-plugin
 
 - `<!--template-extract-js-->` JS代码插入的位置
 
+- `<!--template-extract-del-start-->` 需要移除的代码块起始标志
+
+- `<!--template-extract-del-end-->` 需要移除的代码结束标志
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +42,19 @@ yarn add -D template-extract-plugin
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--template-extract-css-->
     <title>test</title>
+    <!--template-extract-del-start-->
+    <style>
+      .loading{}
+    </style>
+    <!--template-extract-del-end-->
   </head>
   <body>
-    <div id='root'><!--template-extract-dom--></div>
+    <div id='root'>
+      <!--template-extract-del-start-->
+      <div class='loading'></div>
+      <!--template-extract-del-end-->
+      <!--template-extract-dom-->
+    </div>
   </body>
   <!--template-extract-js-->
 </html>
