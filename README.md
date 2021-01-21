@@ -10,6 +10,8 @@
 
 从 `html-webpack-plugin` 中提取 `css` 和 `html`，并全局输出 `_get_extract_template_` 方法，获取相应的模板。
 
+**Note**：插件强依赖 `html-webpack-plugin`，请确保项目中已经安装
+
 ## 使用
 
 ### 安装
